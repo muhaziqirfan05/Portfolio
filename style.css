@@ -1,0 +1,70 @@
+body, html {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    /* Changed to white/light grey to avoid a black flash before the image loads */
+    background-color: #f0f0f0; 
+    font-family: 'Press Start 2P', cursive;
+}
+
+#portfolio-container {
+    position: relative;
+    width: 100vw; height: 100vh;
+}
+
+#ui-layer {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: opacity 0.5s ease;
+    /* Removed the white background to keep the game background visible */
+    background: transparent; 
+}
+
+.title {
+    /* Matches the dark blue/gray tech accents in your new image */
+    color: #2c3e50; 
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    /* Subtle shadow for depth since the background is bright */
+    text-shadow: 2px 2px rgba(0,0,0,0.1);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 280px;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white for a "glass" look */
+    /* Matches the gold circuit traces in your image */
+    color: #b8922e; 
+    border: 3px solid #d4af37;
+    padding: 15px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    /* Optional: glass blur effect */
+    backdrop-filter: blur(5px);
+}
+
+button:hover {
+    background: #d4af37;
+    color: #fff;
+    transform: translateX(10px);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}

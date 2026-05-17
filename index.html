@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhd Haziq Irfan Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+</head>
+<body>
+
+    <div id="portfolio-container">
+        <div id="game-canvas"></div>
+
+        <div id="ui-layer">
+            <h1 class="title">MAIN MENU</h1>
+            <div class="menu">
+                <button onclick="handleNav('about')">ABOUT ME</button>
+                <button onclick="handleNav('projects')">PROJECTS</button>
+                <button onclick="handleNav('contact')">CONTACT ME</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
