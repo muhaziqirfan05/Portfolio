@@ -3,26 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhd Haziq Irfan Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Portfolio | Muhd Haziq Irfan bin Nafri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
 </head>
-<body>
+<body class="bg-[#050505] text-white">
 
-    <div id="portfolio-container">
-        <div id="game-canvas"></div>
+    <div class="custom-cursor" id="cursor"></div>
 
-        <div id="ui-layer">
-            <h1 class="title">MAIN MENU</h1>
-            <div class="menu">
-                <button onclick="handleNav('about')">ABOUT ME</button>
-                <button onclick="handleNav('projects')">PROJECTS</button>
-                <button onclick="handleNav('contact')">CONTACT ME</button>
+    <nav class="fixed top-0 w-full p-8 flex justify-between items-center z-50 mix-blend-difference uppercase font-bold text-[10px] tracking-[0.2em]">
+        <div>Muhd Haziq Irfan bin Nafri</div>
+        <div class="nav-glass">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#skills" class="nav-link">Expertise</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <div class="nav-indicator"></div>
+    </div>
+    </nav>
+
+    <section class="h-screen flex items-center px-8 md:px-24">
+       <h1 id="hero-text" class="relative z-10 cursor-default">
+            <span class="type-effect" data-text="WELCOME">WELCOME</span><br>
+            <span class="type-effect" data-text="TO MY">TO MY</span><br>
+            <span class="type-effect" data-text="PORTFOLIO">PORTFOLIO</span>
+        </h1>
+    </section>
+
+    <section id="about" class="py-40 px-8 md:px-24 bg-[#fcfcfc] text-black">
+        <h2 class="section-label">01 / About</h2>
+        <p class="text-4xl md:text-6xl font-medium max-w-5xl leading-tight mt-10">
+            I'm a student at Universiti Teknologi MARA(UiTM) with a passion for software development and creative engineering. I'm currently studying in Computer Science field in the level of Diploma.I specialize in crafting innovative solutions that blend functionality with artistic design. With a strong foundation in programming and a keen eye for aesthetics, I strive to create impactful digital experiences that resonate with users and push the boundaries of technology.
+        </p>
+    </section>
+
+    <section id="skills" class="py-40 px-8 md:px-24 bg-[#050505]">
+    <h2 class="text-[10px] uppercase tracking-[0.4em] text-neutral-600 mb-20 font-bold">02 / EXPERTISE</h2>
+    
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<div class="flex flex-wrap gap-6">
+    <div class="skill-card">
+        <i class="fa-brands fa-html5 skill-icon"></i>
+        <span class="skill-name">HTML5</span>
+    </div>
+    <div class="skill-card">
+        <i class="fa-brands fa-css3-alt skill-icon"></i>
+        <span class="skill-name">CSS3</span>
+    </div>
+    <div class="skill-card">
+        <i class="fa-brands fa-js skill-icon"></i>
+        <span class="skill-name">JAVASCRIPT</span>
+    </div>
+    <div class="skill-card">
+        <i class="fa-brands fa-react skill-icon"></i>
+        <span class="skill-name">REACT.JS</span>
+    </div>
+
+    <div class="skill-card">
+        <i class="fa-brands fa-python skill-icon"></i>
+        <span class="skill-name">PYTHON</span>
+    </div>
+    <div class="skill-card">
+        <i class="fa-brands fa-java skill-icon"></i>
+        <span class="skill-name">JAVA</span>
+    </div>
+    <div class="skill-card">
+        <i class="fa-brands fa-php skill-icon"></i>
+        <span class="skill-name">PHP</span>
+    </div>
+    <div class="skill-card">
+        <i class="fa-solid fa-code skill-icon"></i> <span class="skill-name">C++</span>
+    </div>
+
+    <div class="skill-card">
+        <i class="fa-brands fa-unity skill-icon"></i>
+        <span class="skill-name">UNITY 3D</span>
+    </div>
+    <div class="skill-card">
+        <i class="fa-solid fa-microchip skill-icon"></i>
+        <span class="skill-name">PROLOG</span>
+    </div>
+    <div class="skill-card">
+        <i class="fa-solid fa-lambda skill-icon"></i>
+        <span class="skill-name">SCHEME</span>
+    </div>
+</div>
+</section>
+
+    <section id="journey" class="relative bg-[#050505]">
+    <div class="journey-pin-wrapper h-screen w-full flex items-center relative overflow-hidden">
+        
+        <div id="journey-bg-text" class="absolute bottom-[-5vh] left-[-2vw] font-black text-[25vw] text-white/[0.02] pointer-events-none z-0 uppercase">
+            Journey
+        </div>
+
+        <div class="gallery-slope absolute inset-0 pointer-events-none z-5">
+            <div class="slope-column">
+                <div class="slope-img"><img src="s1.jpg" class="gallery-target" alt=""></div>
+                <div class="slope-img"><img src="s2.jpg" class="gallery-target" alt=""></div>
+            </div>
+            <div class="slope-column">
+                <div class="slope-img"><img src="s3.jpg" class="gallery-target" alt=""></div>
+                <div class="slope-img"><img src="s4.jpg" class="gallery-target" alt=""></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-8 md:px-24 relative z-10">
+            <div class="max-w-xl">
+                <h3 id="j-date" class="text-blue-400 text-sm tracking-widest mb-2">2018 — 2023</h3>
+                <h2 id="j-title" class="text-6xl font-black uppercase mb-4 text-white">Highschool Era</h2>
+                <p id="j-desc" class="text-neutral-400 text-lg">My technical foundation was laid at SMK(A) Tun Ahmad Zaidi, where I was introduced to the world of Computer Science as early as Form 1. For three years, I immersed myself in the logic of programming and computational thinking before transitioning into the Science Dini stream during Form 4 and Form 5. This unique combination of rigorous scientific study and early technical exposure shaped my analytical mindset, bridging the gap between traditional logic and modern innovation.</p>
             </div>
         </div>
     </div>
 
-    <script src="game.js"></script>
+    <div class="trigger-container">
+        <div class="journey-card h-screen" 
+             data-photos='["school1.jpg", "school2.jpg", "school3.jpg", "school4.jpg"]'></div>
+             
+        <div class="journey-card h-screen" 
+             data-date="2023 — Present" 
+             data-title="University" 
+             data-desc="My academic path continued at UiTM Mukah, where I completed a fast-tracked Pre-Diploma program in just one semester. Building on that momentum, I moved to UiTM Kampus Samarahan 2 to pursue a Diploma in Computer Science. Over the course of 2.5 years, I sharpened my expertise in software development and architectural design, culminating in my current professional chapter: a specialized internship at Metadise Sdn. Bhd. (running from February 23rd to August 7th), where I am applying my academic knowledge to real-world creative engineering."
+             data-photos='["uni1.jpg", "uni2.jpg", "uni3.jpg", "uni4.jpg"]'></div>
+    </div>
+</section>
+
+    <section id="gallery" class="py-40 px-8 md:px-24 bg-[#050505]">
+        <h2 class="section-label mb-20">04 / VISUAL LAB</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="aspect-square bg-neutral-900 gallery-item"></div>
+            <div class="aspect-[3/4] bg-neutral-800 gallery-item md:row-span-2"></div>
+            <div class="aspect-square bg-neutral-900 gallery-item"></div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
