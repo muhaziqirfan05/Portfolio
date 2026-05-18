@@ -1,151 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Muhd Haziq Irfan bin Nafri</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Modern Portfolio</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<!-- Lenis -->
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+<!-- Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
-<body class="bg-[#050505] text-white">
 
-    <div class="custom-cursor" id="cursor"></div>
-
-    <nav class="fixed top-0 w-full p-8 flex justify-between items-center z-50 mix-blend-difference uppercase font-bold text-[10px] tracking-[0.2em]">
-        <div>Muhd Haziq Irfan bin Nafri</div>
-        <div class="nav-glass">
-        <a href="#hero" class="nav-link active">Home</a>
-        <a href="#skills" class="nav-link">Expertise</a>
-        <a href="#journey" class="nav-link">Journey</a>
-        <div class="nav-indicator"></div>
-    </div>
-    </nav>
-
-   <section id="hero" class="relative h-screen w-full flex items-center justify-start overflow-hidden bg-[#050505]">
-    
-    <div class="hero-bg-wrapper absolute inset-0 z-0">
-        <img src="your-image.jpeg" class="hero-img w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-transparent to-transparent opacity-90"></div>
-    </div>
-
-    <h1 id="hero-text" class="relative z-10">
-        <span class="type-effect" data-text="WELCOME">WELCOME</span><br>
-        <span class="type-effect" data-text="TO MY">TO MY</span><br>
-        <span class="type-effect" data-text="PORTFOLIO">PORTFOLIO</span>
-    </h1>
-</section>
-
-    <section id="about" class="py-40 px-8 md:px-24 bg-[#fcfcfc] text-black">
-        <h2 class="section-label">01 / About</h2>
-        <p class="text-4xl md:text-6xl font-medium max-w-5xl leading-tight mt-10">
-            I'm a student at Universiti Teknologi MARA(UiTM) with a passion for software development and creative engineering. I'm currently studying in Computer Science field in the level of Diploma.I specialize in crafting innovative solutions that blend functionality with artistic design. With a strong foundation in programming and a keen eye for aesthetics, I strive to create impactful digital experiences that resonate with users and push the boundaries of technology.
-        </p>
-    </section>
-
-    <section id="skills" class="py-40 px-8 md:px-24 bg-[#050505]">
-    <h2 class="text-[10px] uppercase tracking-[0.4em] text-neutral-600 mb-20 font-bold">02 / EXPERTISE</h2>
-    
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<div class="flex flex-wrap gap-6">
-    <div class="skill-card">
-        <i class="fa-brands fa-html5 skill-icon"></i>
-        <span class="skill-name">HTML5</span>
-    </div>
-    <div class="skill-card">
-        <i class="fa-brands fa-css3-alt skill-icon"></i>
-        <span class="skill-name">CSS3</span>
-    </div>
-    <div class="skill-card">
-        <i class="fa-brands fa-js skill-icon"></i>
-        <span class="skill-name">JAVASCRIPT</span>
-    </div>
-    <div class="skill-card">
-        <i class="fa-brands fa-react skill-icon"></i>
-        <span class="skill-name">REACT.JS</span>
-    </div>
-
-    <div class="skill-card">
-        <i class="fa-brands fa-python skill-icon"></i>
-        <span class="skill-name">PYTHON</span>
-    </div>
-    <div class="skill-card">
-        <i class="fa-brands fa-java skill-icon"></i>
-        <span class="skill-name">JAVA</span>
-    </div>
-    <div class="skill-card">
-        <i class="fa-brands fa-php skill-icon"></i>
-        <span class="skill-name">PHP</span>
-    </div>
-    <div class="skill-card">
-        <i class="fa-solid fa-code skill-icon"></i> <span class="skill-name">C++</span>
-    </div>
-
-    <div class="skill-card">
-        <i class="fa-brands fa-unity skill-icon"></i>
-        <span class="skill-name">UNITY 3D</span>
-    </div>
-    <div class="skill-card">
-        <i class="fa-solid fa-microchip skill-icon"></i>
-        <span class="skill-name">PROLOG</span>
-    </div>
-    <div class="skill-card">
-        <i class="fa-solid fa-lambda skill-icon"></i>
-        <span class="skill-name">SCHEME</span>
-    </div>
+<body>
+<div id="lightbox">
+  <img src="" alt="">
 </div>
+<div id="cursor"></div>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="nav-wrap">
+
+<a href="#" class="logo">
+MUHD HAZIQ IRFAN 
+</a>
+
+<div class="desktop-nav">
+
+<a href="#about" class="nav-link">About</a>
+<a href="#skills" class="nav-link">Skills</a>
+<a href="#gallery" class="nav-link">Gallery</a>
+<a href="#projects" class="nav-link">Projects</a>
+<a href="#contact" class="nav-link">Contact</a>
+
+</div>
+
+<button id="menu-btn">
+<i class="fa-solid fa-bars"></i>
+</button>
+
+</div>
+
+</nav>
+
+<!-- MOBILE MENU -->
+
+<div id="mobile-menu">
+
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#gallery">Gallery</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<!-- HERO -->
+
+<section id="hero">
+
+<div class="mesh-gradient">
+<div class="color-orbit"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<div class="grid"></div>
+
+</div>
+
+<div class="container hero-content">
+
+<p class="hero-tag">
+STUDENT AT UITM | INTERNS AT METADISE
+</p>
+
+<h1 class="hero-title">
+BUILD
+<span>IMMERSIVE</span>
+DIGITAL EXPERIENCES
+</h1>
+
+<p class="hero-description">
+
+Replace this text with your own introduction,
+vision, goals, and developer background.
+
+</p>
+
+<div class="hero-buttons">
+  <a href="#projects" class="magnetic btn-primary">View Work</a>
+  <a href="#contact" class="magnetic btn-secondary">Contact</a>
+</div>
+
+</div>
+
 </section>
 
-    <section id="journey" class="relative bg-[#050505]">
-    <div class="journey-pin-wrapper h-screen w-full flex items-center relative overflow-hidden">
-        
-        <div id="journey-bg-text" class="absolute bottom-[-5vh] left-[-2vw] font-black text-[25vw] text-white/[0.02] pointer-events-none z-0 uppercase">
-            Journey
-        </div>
+<!-- ABOUT -->
 
-        <div class="gallery-slope absolute inset-0 pointer-events-none z-5">
-            <div class="slope-column">
-                <div class="slope-img"><img src="s1.jpg" class="gallery-target" alt=""></div>
-                <div class="slope-img"><img src="s2.jpg" class="gallery-target" alt=""></div>
-            </div>
-            <div class="slope-column">
-                <div class="slope-img"><img src="s3.jpg" class="gallery-target" alt=""></div>
-                <div class="slope-img"><img src="s4.jpg" class="gallery-target" alt=""></div>
-            </div>
-        </div>
+<section id="about">
 
-        <div class="container mx-auto px-8 md:px-24 relative z-10">
-            <div class="max-w-xl">
-                <h3 id="j-date" class="text-blue-400 text-sm tracking-widest mb-2">2018 — 2023</h3>
-                <h2 id="j-title" class="text-6xl font-black uppercase mb-4 text-white">Highschool Era</h2>
-                <p id="j-desc" class="text-neutral-400 text-lg">My technical foundation was laid at SMK(A) Tun Ahmad Zaidi, where I was introduced to the world of Computer Science as early as Form 1. For three years, I immersed myself in the logic of programming and computational thinking before transitioning into the Science Dini stream during Form 4 and Form 5. This unique combination of rigorous scientific study and early technical exposure shaped my analytical mindset, bridging the gap between traditional logic and modern innovation.</p>
-            </div>
-        </div>
-    </div>
+<div class="container">
 
-    <div class="trigger-container">
-        <div class="journey-card h-screen" 
-             data-photos='["school1.jpg", "school2.jpg", "school3.jpg", "school4.jpg"]'></div>
-             
-        <div class="journey-card h-screen" 
-             data-date="2023 — Present" 
-             data-title="University" 
-             data-desc="My academic path continued at UiTM Mukah, where I completed a fast-tracked Pre-Diploma program in just one semester. Building on that momentum, I moved to UiTM Kampus Samarahan 2 to pursue a Diploma in Computer Science. Over the course of 2.5 years, I sharpened my expertise in software development and architectural design, culminating in my current professional chapter: a specialized internship at Metadise Sdn. Bhd. (running from February 23rd to August 7th), where I am applying my academic knowledge to real-world creative engineering."
-             data-photos='["uni1.jpg", "uni2.jpg", "uni3.jpg", "uni4.jpg"]'></div>
-    </div>
+<p class="section-tag">
+01 / ABOUT
+</p>
+
+<div class="about-grid">
+
+<div>
+<h2 class="about-title">
+WRITE YOUR
+STORY HERE
+</h2>
+</div>
+
+<div>
+
+<p class="about-text">
+
+Replace this section with your biography,
+experience, education, and career goals.
+
+</p>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h3>2+</h3>
+<p>Years Experience</p>
+</div>
+
+<div class="stat-card">
+<h3>10+</h3>
+<p>Projects Built</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-    <section id="gallery" class="py-40 px-8 md:px-24 bg-[#050505]">
-        <h2 class="section-label mb-20">04 / VISUAL LAB</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="aspect-square bg-neutral-900 gallery-item"></div>
-            <div class="aspect-[3/4] bg-neutral-800 gallery-item md:row-span-2"></div>
-            <div class="aspect-square bg-neutral-900 gallery-item"></div>
-        </div>
-    </section>
+<!-- SKILLS -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+<section id="skills">
+
+<div class="container">
+
+<p class="section-tag">
+02 / EXPERTISE
+</p>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<i class="fa-brands fa-html5"></i>
+<h3>HTML5</h3>
+</div>
+
+<div class="skill-card">
+<i class="fa-brands fa-css3-alt"></i>
+<h3>CSS3</h3>
+</div>
+
+<div class="skill-card">
+<i class="fa-brands fa-js"></i>
+<h3>JavaScript</h3>
+</div>
+
+<div class="skill-card">
+<i class="fa-brands fa-react"></i>
+<h3>React</h3>
+</div>
+
+<div class="skill-card">
+<i class="fa-brands fa-python"></i>
+<h3>Python</h3>
+</div>
+
+<div class="skill-card">
+<i class="fa-brands fa-figma"></i>
+<h3>Figma</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<div class="container">
+
+<p class="section-tag">
+03 / GALLERY
+</p>
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+  <img src="img1.jpg" alt="">
+</div>
+
+<div class="gallery-item">
+  <img src="img1.jpg" alt="">
+</div>
+
+<div class="gallery-item">
+  <img src="img1.jpg" alt="">
+</div>
+
+<div class="gallery-item">
+  <img src="img1.jpg" alt="">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="container">
+
+<p class="section-tag">
+04 / PROJECTS
+</p>
+
+<div class="projects-grid">
+
+<div class="project-card">
+
+<div class="project-image">
+<img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1400&auto=format&fit=crop">
+</div>
+
+<div class="project-content">
+
+<h3>Project Name</h3>
+
+<p>
+Replace this section with project details,
+technologies used, and achievements.
+</p>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<div class="project-image">
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1400&auto=format&fit=crop">
+</div>
+
+<div class="project-content">
+
+<h3>Project Name</h3>
+
+<p>
+Replace this section with project details,
+technologies used, and achievements.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<h2 class="contact-title">
+LET'S CREATE
+SOMETHING AMAZING
+</h2>
+
+<p class="contact-desc">
+
+Replace this with your email, social links,
+or freelance availability.
+
+</p>
+
+<div class="hero-buttons"
+style="justify-content:center; margin-top:40px;">
+
+<a href="#" class="btn-primary">
+Contact Me
+</a>
+
+</div>
+
+<div class="socials">
+
+<a href="#">
+<i class="fa-brands fa-github"></i>
+</a>
+
+<a href="#">
+<i class="fa-brands fa-linkedin"></i>
+</a>
+
+<a href="#">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 YOUR NAME — Portfolio
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/ScrollTrigger/3.12.5/ScrollTrigger.min.js"></script>
+
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+<script src="script.js"></script>
+
 </body>
 </html>
