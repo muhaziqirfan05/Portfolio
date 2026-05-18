@@ -21,16 +21,22 @@ body {
 
 
 #hero-text {
-    font-size: 12vw; /* Slightly smaller to leave room for the background */
+    /* Existing Styles */
+    font-size: 12vw;
     line-height: 0.9;
-    letter-spacing: -0.05em; /* Tighter for that modern look */
+    letter-spacing: -0.05em;
     text-transform: uppercase;
     font-weight: 900;
-    /* Add a subtle gradient to make it less "flat white" */
     background: linear-gradient(to bottom, #fff 40%, #888 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    /* NEW ALIGNMENT STYLES */
+    text-align: left;
+    margin-left: 5vw; /* Adds a bit of breathing room from the left edge */
+    width: fit-content; /* Ensures the background gradient stays tight to the text */
 }
+
 
 /* UI Elements */
 .section-label {
